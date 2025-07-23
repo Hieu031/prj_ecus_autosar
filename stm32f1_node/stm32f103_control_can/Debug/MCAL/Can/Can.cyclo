@@ -1,0 +1,4 @@
+../MCAL/Can/Can.c:15:6:Can_Init	1
+../MCAL/Can/Can.c:21:6:Can_SetRxCallback	1
+../MCAL/Can/Can.c:26:6:Can_Send	1
+../MCAL/Can/Can.c:41:6:HAL_CAN_RxFifo0MsgPendingCallback	4
