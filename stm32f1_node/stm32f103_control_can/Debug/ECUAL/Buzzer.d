@@ -1,5 +1,5 @@
 ECUAL/Buzzer.o: ../ECUAL/Buzzer.c ../ECUAL/Buzzer.h \
- D:/Workplace/Autosar_project_VTI/stm32f103_control_can/MCAL/Dio/Dio.h \
+ D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/MCAL/Dio/Dio.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -25,7 +25,7 @@ ECUAL/Buzzer.o: ../ECUAL/Buzzer.c ../ECUAL/Buzzer.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 ../ECUAL/Buzzer.h:
-D:/Workplace/Autosar_project_VTI/stm32f103_control_can/MCAL/Dio/Dio.h:
+D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/MCAL/Dio/Dio.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
