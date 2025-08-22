@@ -1,0 +1,4 @@
+../MCAL/Can.c:5:6:Can_Init	16	static
+../MCAL/Can.c:9:6:Can_ConfigFilter	56	static
+../MCAL/Can.c:24:6:Can_Start	8	static
+../MCAL/Can.c:29:6:Can_RxIrqHandler	48	static

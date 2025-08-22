@@ -1,0 +1,2 @@
+../EcuA/CanIf.c:7:6:CanIf_Init	1
+../EcuA/CanIf.c:9:6:CanIf_RxIndication	2

@@ -1,0 +1,2 @@
+../MCAL/I2C_Driver.c:13:9:I2C_Master_Transmit	1
+../MCAL/I2C_Driver.c:17:9:I2C_Master_Receive	1

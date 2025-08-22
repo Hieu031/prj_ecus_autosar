@@ -1,0 +1,3 @@
+../Service/Lcd_Service.c:12:6:LcdService_Init	1
+../Service/Lcd_Service.c:17:6:LcdService_DisplayTempHumi	1
+../Service/Lcd_Service.c:31:6:LcdService_DisplayError	1

@@ -1,0 +1,4 @@
+../RTE/Rte.c:6:6:Rte_Init	1
+../RTE/Rte.c:11:9:Rte_Read_Temp_x10	1
+../RTE/Rte.c:15:9:Rte_Read_Humi_x10	1
+../RTE/Rte.c:19:6:Rte_Call_Buzzer_Set	1
