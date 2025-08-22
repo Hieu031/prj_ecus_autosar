@@ -1,0 +1,2 @@
+../ECual/IoHwAb.c:6:6:IoHwAb_ReadDHT22	16	static
+../ECual/IoHwAb.c:11:6:IoHwAb_DisplayLCD	16	static

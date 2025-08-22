@@ -1,0 +1,3 @@
+../ECU_Abstraction/SHT31_Driver.c:21:16:check_crc8	4
+../ECU_Abstraction/SHT31_Driver.c:36:9:SHT31_Init	2
+../ECU_Abstraction/SHT31_Driver.c:47:9:SHT31_Read	5

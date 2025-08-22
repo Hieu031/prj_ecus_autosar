@@ -1,0 +1,2 @@
+../RTE/RTE_TempHum.c:12:6:Rte_TempHum_Init	2
+../RTE/RTE_TempHum.c:25:6:Rte_TempHum_Cyclic	2

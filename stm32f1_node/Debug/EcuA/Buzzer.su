@@ -1,0 +1,2 @@
+../EcuA/Buzzer.c:5:6:Buzzer_Init	32	static
+../EcuA/Buzzer.c:16:6:Buzzer_Set	16	static

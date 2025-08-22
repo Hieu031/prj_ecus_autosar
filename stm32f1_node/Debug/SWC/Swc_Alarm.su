@@ -1,0 +1,2 @@
+../SWC/Swc_Alarm.c:7:6:Swc_Alarm_Init	8	static
+../SWC/Swc_Alarm.c:12:6:Swc_Alarm_Runnable_100ms	16	static

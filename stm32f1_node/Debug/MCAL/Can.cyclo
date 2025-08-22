@@ -1,0 +1,4 @@
+../MCAL/Can.c:5:6:Can_Init	1
+../MCAL/Can.c:9:6:Can_ConfigFilter	1
+../MCAL/Can.c:24:6:Can_Start	1
+../MCAL/Can.c:29:6:Can_RxIrqHandler	3

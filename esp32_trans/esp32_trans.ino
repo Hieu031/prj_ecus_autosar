@@ -55,112 +55,114 @@ void getTime(){
   }
 }
 
-void sendRandomDataToFB(){
-  float temp = random(200, 350) / 10.0;
-  float hum  = random(400, 900) / 10.0;
+// void sendRandomDataToFB(){
+//   float temp = random(200, 350) / 10.0;
+//   float hum  = random(400, 900) / 10.0;
   
-  // Get real time
-  time_t now;
-  time(&now);
+//   // Get real time
+//   time_t now;
+//   time(&now);
 
-  // Change format: YYYYMMDD_HHMMSS
-  struct tm timeinfo;
-  localtime_r(&now, &timeinfo);
+//   // Change format: YYYYMMDD_HHMMSS
+//   struct tm timeinfo;
+//   localtime_r(&now, &timeinfo);
 
-  char timeKey[32];
-  strftime(timeKey, sizeof(timeKey), "%Y%m%d_%H%M%S", &timeinfo);
+//   char timeKey[32];
+//   strftime(timeKey, sizeof(timeKey), "%Y%m%d_%H%M%S", &timeinfo);
 
-  // Gen path save as real time
-  String dataPath = "/SHT/history/" + String(timeKey);
+//   // Gen path save as real time
+//   String dataPath = "/SHT/history/" + String(timeKey);
 
-  FirebaseJson json;
-  json.set("Temperature", temp);
-  json.set("Humidity", hum);
+//   FirebaseJson json;
+//   json.set("Temperature", temp);
+//   json.set("Humidity", hum);
 
-  Serial.printf("Sent data at: %s | temp: %.2f | hum: %.2f\n", timeKey, temp, hum);
+//   Serial.printf("Sent data at: %s | temp: %.2f | hum: %.2f\n", timeKey, temp, hum);
 
-  bool ok = firebase.RTDB.setJSON(&fbdo, dataPath.c_str(), &json);
+//   bool ok = firebase.RTDB.setJSON(&fbdo, dataPath.c_str(), &json);
 
-  if (ok){
-    Serial.println("Simulation temp and hum oke!");
-  }
-  else
-  {
-    Serial.println("Firebase Error: " + fbdo.errorReason());
-  }
-}
-
-// void sendDataSensor(){
-//   static String uartData = "";
-  
-//   while (Serial2.available()){
-//     char c = Serial2.read();
-//     if (c == '\n'){
-//       Serial.println("Recieve UART: " + uartData);
-
-//       // Parse JSON from STM32F4
-//       StaticJsonDocument<128> doc;
-//       DeserializationError error = deserializeJson(doc, uartData);
-
-//       if (!error) {
-//         float temp = doc["temp"];
-//         float hum = doc["hum"];
-
-//         // get real time
-//         time_t now;
-//         time(&now);
-
-//         // change format: YYYYMMDD_HHMMSS
-//         struct tm timeinfo;
-//         localtime_r(&now, &timeinfo);
-
-//         char timekey[32];
-//         strftime(timeKey, sizeof(timeKey), "%Y%m%d_%H%M%S", %timeinfo);
-
-//         // Gen path save as real time
-//         String dataPath = "/SHT31_test/history/" + String(timeKey);
-
-//         FirebaseJson json;
-//         json.set("Temperature", temp);
-//         json.set("Humidity", hum);
-
-
-//         Serial.printf("Sent data at: %s | Temp: %.2f | Hum: %.2f\n",timeKey, temp, hum);
-
-//         // Sent data up to Firebase
-//         bool ok = firebase.RTDB.setJSON(&fbdo, dataPath.c_str(), &json);
-
-//         if (ok){
-//           Serial.println("Upload OK!");
-//         }
-//         else
-//         {
-//           Serial.println("Firebase Error: " + fbdo.errorReason());
-//         }
-//       }
-//       else
-//       {
-//         Serial.println("JSON Parse Error: " + String(error.c_str()));
-//       }
-
-//       uartData = "";
-//     }
-//     else
-//     {
-//       uartData += c;
-//     }
+//   if (ok){
+//     Serial.println("Simulation temp and hum oke!");
 //   }
-//   // delay(100);
+//   else
+//   {
+//     Serial.println("Firebase Error: " + fbdo.errorReason());
+//   }
 // }
 
+void sendDataSensor(){
+  static String uartData = "";
+  
+  while (Serial2.available()){
+    char c = Serial2.read();
+    if (c == '\n'){
+      Serial.println("Recieve UART: " + uartData);
+
+      // Parse JSON from STM32F4
+      StaticJsonDocument<128> doc;
+      DeserializationError error = deserializeJson(doc, uartData);
+
+      if (!error) {
+        float temp = doc["temp"];
+        float hum = doc["hum"];
+
+        // get real time
+        time_t now;
+        time(&now);
+
+        // change format: YYYYMMDD_HHMMSS
+        struct tm timeinfo;
+        localtime_r(&now, &timeinfo);
+
+        char timekey[32];
+        strftime(timeKey, sizeof(timeKey), "%Y%m%d_%H%M%S", %timeinfo);
+
+        // Gen path save as real time
+        String dataPath = "/SHT31_test/history/" + String(timeKey);
+
+        FirebaseJson json;
+        json.set("Temperature", temp);
+        json.set("Humidity", hum);
+
+
+        Serial.printf("Sent data at: %s | Temp: %.2f | Hum: %.2f\n",timeKey, temp, hum);
+
+        // Sent data up to Firebase
+        bool ok = firebase.RTDB.setJSON(&fbdo, dataPath.c_str(), &json);
+
+        if (ok){
+          Serial.println("Upload OK!");
+        }
+        else
+        {
+          Serial.println("Firebase Error: " + fbdo.errorReason());
+        }
+      }
+      else
+      {
+        Serial.println("JSON Parse Error: " + String(error.c_str()));
+      }
+
+      uartData = "";
+    }
+    else
+    {
+      uartData += c;
+    }
+  }
+  // delay(100);
+}
+
 void setup() {
-  // Use to random when simulation temp and hum
-  randomSeed(millis());
-  getTime();
+  // // Use to random when simulation temp and hum
+  // randomSeed(millis());
+  // getTime();
+
   // Init baudrate and serial uart 
   Serial.begin(115200);
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
   Serial.println("Start with ESP32!");
+  
   // Config connect wifi
   WiFi.begin(ssid, password);
   Serial.print("Connecting to Wifi: ");
@@ -181,6 +183,9 @@ void setup() {
   Serial.println("\nConnected to WiFi!");
   Serial.print("IP: ");
   Serial.println(WiFi.localIP());
+
+  // Sync NTP after connected Wifi
+  getTime()
 
   // Config firebase
   config.api_key = API_KEY;
@@ -209,7 +214,8 @@ void setup() {
 
 void loop() {
   Serial.println("\nThe new loop start...");
-  sendRandomDataToFB();
+  // sendRandomDataToFB();
+  sendDataSensor();
   delay(5000);
 }
 

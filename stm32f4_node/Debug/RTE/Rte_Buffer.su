@@ -1,0 +1,2 @@
+../RTE/Rte_Buffer.c:5:16:Rte_Write_SensorData	16	static
+../RTE/Rte_Buffer.c:11:16:Rte_Read_SensorData	16	static
