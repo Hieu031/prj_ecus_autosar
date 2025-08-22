@@ -15,10 +15,11 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
-#include "main.h"
 
+#include "main.h"
+#include "AppControl.h"
+
+<<<<<<< HEAD:test_sht31_lcd_i2c/Core/Src/main.c
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -41,53 +42,27 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
+=======
+CAN_HandleTypeDef hcan;
 
-/* USER CODE BEGIN PV */
+UART_HandleTypeDef huart1;
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Core/Src/main.c
 
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+<<<<<<< HEAD:test_sht31_lcd_i2c/Core/Src/main.c
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
+=======
+static void MX_CAN_Init(void);
+static void MX_USART1_UART_Init(void);
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Core/Src/main.c
 
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
-
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
   MX_GPIO_Init();
+<<<<<<< HEAD:test_sht31_lcd_i2c/Core/Src/main.c
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   Application_Init();
@@ -101,14 +76,17 @@ int main(void)
 	  Application_Run();
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
+=======
+  MX_CAN_Init();
+  MX_USART1_UART_Init();
+  App_Init();
+  while (1)
+  {
+	  App_Loop();
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Core/Src/main.c
   }
-  /* USER CODE END 3 */
 }
 
-/**
-  * @brief System Clock Configuration
-  * @retval None
-  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};

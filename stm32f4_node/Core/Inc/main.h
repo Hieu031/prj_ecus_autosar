@@ -31,6 +31,7 @@ extern "C" {
 #include "Rte.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "AppControl.h"
 
 /* USER CODE END Includes */
 

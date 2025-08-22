@@ -1,6 +1,11 @@
+<<<<<<< HEAD:stm32f1_node/Debug/EcuA/Buzzer.d
 EcuA/Buzzer.o: ../EcuA/Buzzer.c ../EcuA/Buzzer.h \
  D:/Workspace/stm32f1_node/Config/EcuC_Cfg.h \
  D:/Workspace/stm32f1_node/MCAL/Dio.h \
+=======
+ECUAL/Buzzer.o: ../ECUAL/Buzzer.c ../ECUAL/Buzzer.h \
+ D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/MCAL/Dio/Dio.h \
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Debug/ECUAL/Buzzer.d
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -24,11 +29,17 @@ EcuA/Buzzer.o: ../EcuA/Buzzer.c ../EcuA/Buzzer.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+<<<<<<< HEAD:stm32f1_node/Debug/EcuA/Buzzer.d
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 ../EcuA/Buzzer.h:
 D:/Workspace/stm32f1_node/Config/EcuC_Cfg.h:
 D:/Workspace/stm32f1_node/MCAL/Dio.h:
+=======
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+../ECUAL/Buzzer.h:
+D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/MCAL/Dio/Dio.h:
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Debug/ECUAL/Buzzer.d
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:

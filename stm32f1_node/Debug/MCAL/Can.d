@@ -22,9 +22,15 @@ MCAL/Can.o: ../MCAL/Can.c ../MCAL/Can.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+<<<<<<< HEAD:stm32f1_node/Debug/MCAL/Can.d
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 ../MCAL/Can.h:
+=======
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+ D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/Application/AppControl.h
+../Core/Inc/main.h:
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Debug/Core/Src/main.d
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -48,5 +54,10 @@ MCAL/Can.o: ../MCAL/Can.c ../MCAL/Can.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
+<<<<<<< HEAD:stm32f1_node/Debug/MCAL/Can.d
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+=======
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+D:/Workplace/autosar_prj_ecus/stm32f1_node/stm32f103_control_can/Application/AppControl.h:
+>>>>>>> main:stm32f1_node/stm32f103_control_can/Debug/Core/Src/main.d
